@@ -145,14 +145,30 @@ final class PurchaseManager: ObservableObject {
 
 // MARK: - Paywall View (PRO)
 
+/// Shown only after the parental gate is passed (Guideline 1.3).
+/// Displays the product title, purchase type (one-time, not a subscription) and price,
+/// plus links to the Privacy Policy and Terms of Use (Guideline 3.1.2), each behind the gate.
 struct PaywallView: View {
     let isPro: Bool
-    let priceText: String
+    let product: Product?
     let onBuy: () -> Void
     let onRestore: () -> Void
     let onClose: () -> Void
 
+    @State private var gatePassed = false
+
     var body: some View {
+        if gatePassed {
+            paywall
+        } else {
+            ParentalGateView(
+                onSuccess: { withAnimation { gatePassed = true } },
+                onCancel: onClose
+            )
+        }
+    }
+
+    private var paywall: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 16) {
@@ -175,6 +191,27 @@ struct PaywallView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.top, 6)
+
+                    // Product title, purchase type and price
+                    VStack(spacing: 6) {
+                        Text(product?.displayName ?? "Math Race PRO")
+                            .font(.system(.title3, design: .rounded).weight(.black))
+                        Text("pro_purchase_type")
+                            .font(.system(.subheadline, design: .rounded).weight(.semibold))
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                        if let product {
+                            Text(product.displayPrice)
+                                .font(.system(.largeTitle, design: .rounded).weight(.black))
+                        } else {
+                            ProgressView()
+                                .padding(.vertical, 8)
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(14)
+                    .background(.ultraThinMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
 
                     VStack(alignment: .leading, spacing: 12) {
                         Text("pro_whats_included")
@@ -216,11 +253,18 @@ struct PaywallView: View {
 
                     VStack(spacing: 10) {
                         Button(action: onBuy) {
-                            Text(String(format: String(localized: "pro_buy_with_price"), priceText))
-                                .font(.system(.headline, design: .rounded).bold())
-                                .frame(maxWidth: .infinity, minHeight: 56)
+                            Group {
+                                if let product {
+                                    Text(String(format: String(localized: "pro_buy_with_price"), product.displayPrice))
+                                } else {
+                                    Text("pro_loading")
+                                }
+                            }
+                            .font(.system(.headline, design: .rounded).bold())
+                            .frame(maxWidth: .infinity, minHeight: 56)
                         }
                         .buttonStyle(KidButtonStyle())
+                        .disabled(product == nil || isPro)
 
                         Button(action: onRestore) {
                             Text("restore")
@@ -234,6 +278,13 @@ struct PaywallView: View {
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.secondary)
                             .padding(.top, 4)
+
+                        HStack(spacing: 20) {
+                            GatedLinkButton(titleKey: "privacy_policy", systemImage: "hand.raised", url: ParentalGate.privacyURL)
+                            GatedLinkButton(titleKey: "terms_of_use", systemImage: "doc.text", url: ParentalGate.termsURL)
+                        }
+                        .font(.system(.footnote, design: .rounded).weight(.semibold))
+                        .padding(.top, 4)
                     }
 
                     Spacer(minLength: 8)
@@ -430,7 +481,7 @@ struct ContentView: View {
                 .sheet(isPresented: $showPaywall) {
                     PaywallView(
                         isPro: purchases.isPro,
-                        priceText: purchases.products.first?.displayPrice ?? "€1.99",
+                        product: purchases.products.first(where: { $0.id == purchases.proProductId }),
                         onBuy: {
                             Task {
                                 let ok = await purchases.purchasePro()
@@ -1781,6 +1832,17 @@ struct SettingsView: View {
                     }
                 } header: {
                     Text("pro")
+                }
+
+                // External links — every one is behind the parental gate (Guideline 1.3).
+                Section {
+                    GatedLinkButton(titleKey: "support", systemImage: "questionmark.circle", url: ParentalGate.supportURL)
+                    GatedLinkButton(titleKey: "privacy_policy", systemImage: "hand.raised", url: ParentalGate.privacyURL)
+                    GatedLinkButton(titleKey: "terms_of_use", systemImage: "doc.text", url: ParentalGate.termsURL)
+                } header: {
+                    Text("pro_parent_title")
+                } footer: {
+                    Text("parents_links_footer")
                 }
             }
             .navigationTitle("settings")

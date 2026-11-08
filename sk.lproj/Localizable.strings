@@ -109,3 +109,17 @@
 "faster" = "Rýchlejší";
 "round_times" = "Časy kôl";
 "history" = "História";
+// --- Rodičovská brána (Guideline 1.3) ---
+"gate_nav_title" = "Pre rodičov";
+"gate_title" = "Popros dospelého";
+"gate_instruction" = "Pre pokračovanie napíšte toto číslo číslicami:";
+"gate_placeholder" = "Číslo";
+"gate_continue" = "Pokračovať";
+"gate_cancel" = "Zrušiť";
+"gate_wrong" = "Nesprávne. Tu je nové číslo.";
+"pro_purchase_type" = "Jednorazový nákup · navždy · nie je to predplatné";
+"pro_loading" = "Načítavam cenu…";
+"privacy_policy" = "Zásady ochrany súkromia";
+"terms_of_use" = "Podmienky používania";
+"support" = "Podpora";
+"parents_links_footer" = "Tieto odkazy otvoria webovú stránku mimo aplikácie a vyžadujú rodiča.";

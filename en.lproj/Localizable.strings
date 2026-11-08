@@ -109,3 +109,17 @@
 "faster" = "Faster";
 "round_times" = "Round times";
 "history" = "History";
+// --- Parental gate (Guideline 1.3) ---
+"gate_nav_title" = "For parents";
+"gate_title" = "Ask a grown-up";
+"gate_instruction" = "To continue, type this number using digits:";
+"gate_placeholder" = "Number";
+"gate_continue" = "Continue";
+"gate_cancel" = "Cancel";
+"gate_wrong" = "That's not right. Here is a new number.";
+"pro_purchase_type" = "One-time purchase · lifetime access · not a subscription";
+"pro_loading" = "Loading price…";
+"privacy_policy" = "Privacy Policy";
+"terms_of_use" = "Terms of Use";
+"support" = "Support";
+"parents_links_footer" = "These links open a web page outside the app and require a parent.";

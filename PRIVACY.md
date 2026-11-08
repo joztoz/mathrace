@@ -11,4 +11,6 @@ The app:
 In-app purchases are handled securely by Apple via the App Store.
 The developer does not receive any personal or payment data.
 
-If you have questions, please contact us via GitHub Issues.
+Purchases and links that leave the app are protected by a parental gate.
+
+Questions? Contact apps@maddog.sk. Full policy: https://joztoz.github.io/mathrace/privacy.html
