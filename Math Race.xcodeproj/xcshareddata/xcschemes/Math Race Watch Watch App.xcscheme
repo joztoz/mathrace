@@ -84,7 +84,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1DC8D6F12F1C73A50003ED2F"
             BuildableName = "Math Race Watch Watch App.app"
-            BlueprintName = "Math Race Watch Watch App"
             ReferencedContainer = "container:Math Race.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -101,7 +100,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1DC8D6F12F1C73A50003ED2F"
             BuildableName = "Math Race Watch Watch App.app"
-            BlueprintName = "Math Race Watch Watch App"
             ReferencedContainer = "container:Math Race.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

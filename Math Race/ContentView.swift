@@ -1434,9 +1434,13 @@ struct ContentView: View {
 
 // MARK: - Tone Feedback (Silent-mode friendly)
 
-final class ToneFeedback {
+/// Audio work runs on a private serial queue: AVAudioSession activation and
+/// AVAudioPlayer preparation can block, so they must not run on the main thread.
+nonisolated final class ToneFeedback: @unchecked Sendable {
     static let shared = ToneFeedback()
 
+    private let queue = DispatchQueue(label: "MathRace.ToneFeedback", qos: .userInitiated)
+    // Accessed only on `queue`.
     private var configured = false
     private var successPlayers: [AVAudioPlayer] = []
     private var errorPlayers: [AVAudioPlayer] = []
@@ -1444,6 +1448,30 @@ final class ToneFeedback {
     private init() {}
 
     func configureIfNeeded() {
+        queue.async { self.configureOnQueue() }
+    }
+
+    func playSuccess(index: Int) {
+        queue.async {
+            self.configureOnQueue()
+            guard !self.successPlayers.isEmpty else { return }
+            let p = self.successPlayers[index % self.successPlayers.count]
+            p.currentTime = 0
+            p.play()
+        }
+    }
+
+    func playError(index: Int) {
+        queue.async {
+            self.configureOnQueue()
+            guard !self.errorPlayers.isEmpty else { return }
+            let p = self.errorPlayers[index % self.errorPlayers.count]
+            p.currentTime = 0
+            p.play()
+        }
+    }
+
+    private func configureOnQueue() {
         guard !configured else { return }
         configured = true
 
@@ -1472,22 +1500,6 @@ final class ToneFeedback {
         // Avoid “first play lag”
         successPlayers.forEach { $0.prepareToPlay() }
         errorPlayers.forEach { $0.prepareToPlay() }
-    }
-
-    func playSuccess(index: Int) {
-        configureIfNeeded()
-        guard !successPlayers.isEmpty else { return }
-        let p = successPlayers[index % successPlayers.count]
-        p.currentTime = 0
-        p.play()
-    }
-
-    func playError(index: Int) {
-        configureIfNeeded()
-        guard !errorPlayers.isEmpty else { return }
-        let p = errorPlayers[index % errorPlayers.count]
-        p.currentTime = 0
-        p.play()
     }
 
     private func makeTonePlayer(frequency: Double, duration: Double, gain: Double) -> AVAudioPlayer? {
@@ -1552,7 +1564,7 @@ final class ToneFeedback {
 }
 
 private extension FixedWidthInteger {
-    var littleEndianData: Data {
+    nonisolated var littleEndianData: Data {
         var v = self.littleEndian
         return Data(bytes: &v, count: MemoryLayout<Self>.size)
     }

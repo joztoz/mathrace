@@ -10,7 +10,6 @@
 		1DC8D6EC2F1C372B0003ED2F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8D6EA2F1C372B0003ED2F /* Localizable.strings */; };
 		1DC8D7122F1C73A60003ED2F /* Math Race Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DC8D6F22F1C73A50003ED2F /* Math Race Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DC8D71E2F1C741C0003ED2F /* SharedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D71D2F1C741C0003ED2F /* SharedGame.swift */; };
-		1DC8D71F2F1C741C0003ED2F /* SharedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D71D2F1C741C0003ED2F /* SharedGame.swift */; };
 		1DC8D7262F1D04A60003ED2F /* MathRace.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8D7252F1D04A60003ED2F /* MathRace.storekit */; };
 /* End PBXBuildFile section */
 
@@ -461,7 +460,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC8D71F2F1C741C0003ED2F /* SharedGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

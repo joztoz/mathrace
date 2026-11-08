@@ -60,6 +60,9 @@ struct FaceOffSplit {
         }
         // iPad / no fold: split across the longer side, in the middle.
         let gap: CGFloat = 8
+        guard size.width > gap, size.height > gap else {
+            return FaceOffSplit(axis: .topBottom, first: .zero, second: .zero)
+        }
         if size.width > size.height {
             let w = (size.width - gap) / 2
             return FaceOffSplit(axis: .leftRight,
@@ -337,11 +340,13 @@ struct RotatedPanel<Content: View>: View {
 
     var body: some View {
         let quarterTurn = abs(Int(rotation.degrees.rounded())) % 180 == 90
-        let inner = quarterTurn ? CGSize(width: rect.height, height: rect.width) : rect.size
+        let w = rect.width.isFinite ? max(0, rect.width) : 0
+        let h = rect.height.isFinite ? max(0, rect.height) : 0
+        let inner = quarterTurn ? CGSize(width: h, height: w) : CGSize(width: w, height: h)
         content(inner)
             .frame(width: inner.width, height: inner.height)
             .rotationEffect(rotation)
-            .frame(width: rect.width, height: rect.height)
+            .frame(width: w, height: h)
             .position(x: rect.midX, y: rect.midY)
     }
 }
