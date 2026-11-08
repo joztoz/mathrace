@@ -61,6 +61,7 @@
 | ASC slot | Files | Size |
 |---|---|---|
 | iPhone 6.9" (en / sk) | `iphone-6.9/en/`, `iphone-6.9/sk/` | 1320 × 2868 |
+| iPhone 6.3" / 6.1" (en / sk) | `iphone-medium-1206x2622/<lang>/` or `iphone-medium-1179x2556/<lang>/` | 1206 × 2622 / 1179 × 2556 |
 | iPad 13" (en / sk) | `ipad-13/en/`, `ipad-13/sk/` | 2064 × 2752 |
 | Apple Watch Ultra 3 | `watch-ultra/01-game.jpg` | 422 × 514 |
 | Apple Watch Series 11 (46mm) | `watch-46/01-game.jpg` | 416 × 496 |

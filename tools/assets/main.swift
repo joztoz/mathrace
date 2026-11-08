@@ -141,6 +141,10 @@ struct Banner: View {
         let sets: [(prefix: String, folder: String, size: CGSize, order: [(String, String)])] = [
             ("iphone", "iphone-6.9", CGSize(width: 1320, height: 2868),
              [("01-single", "single"), ("02-duel", "duel"), ("03-settings", "settings"), ("04-start", "start")]),
+            ("iphone", "iphone-medium-1206x2622", CGSize(width: 1206, height: 2622),
+             [("01-single", "single"), ("02-duel", "duel"), ("03-settings", "settings"), ("04-start", "start")]),
+            ("iphone", "iphone-medium-1179x2556", CGSize(width: 1179, height: 2556),
+             [("01-single", "single"), ("02-duel", "duel"), ("03-settings", "settings"), ("04-start", "start")]),
             ("ipad", "ipad-13", CGSize(width: 2064, height: 2752),
              [("00-faceoff", "faceoff"), ("01-single", "single"), ("02-duel", "duel"), ("03-settings", "settings")]),
         ]
