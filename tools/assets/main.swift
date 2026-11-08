@@ -147,6 +147,10 @@ struct Banner: View {
              [("01-single", "single"), ("02-duel", "duel"), ("03-settings", "settings"), ("04-start", "start")]),
             ("ipad", "ipad-13", CGSize(width: 2064, height: 2752),
              [("00-faceoff", "faceoff"), ("01-single", "single"), ("02-duel", "duel"), ("03-settings", "settings")]),
+            // iPhone Duo inner display: the simulator can't be unfolded headlessly, so these use the
+            // iPad captures (same wide layout as the unfolded Duo).
+            ("ipad", "duo-inner", CGSize(width: 2007, height: 2853),
+             [("00-faceoff", "faceoff"), ("01-single", "single"), ("02-duel", "duel"), ("03-settings", "settings")]),
         ]
         for lang in ["en", "sk"] {
             for set in sets {
