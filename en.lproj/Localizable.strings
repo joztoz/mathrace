@@ -123,3 +123,17 @@
 "terms_of_use" = "Terms of Use";
 "support" = "Support";
 "parents_links_footer" = "These links open a web page outside the app and require a parent.";
+
+// --- Face to face mode (iPad / iPhone Duo) ---
+"face_off_mode" = "Face to face";
+"face_off_locked" = "Face to face 🔒";
+"face_off_hint" = "2 players sitting opposite each other";
+"pro_feature_faceoff" = "Face to face: 2 players on iPad or unfolded iPhone Duo";
+"fo_first_to" = "First to %d correct answers wins!";
+"fo_ready" = "I'm ready!";
+"fo_waiting" = "Waiting for the other player…";
+"fo_get_ready" = "Get ready…";
+"fo_you_win" = "You win! 🏆";
+"fo_you_lose" = "Nice try! 💪";
+"fo_play_again" = "Play again";
+"fo_exit" = "Exit";

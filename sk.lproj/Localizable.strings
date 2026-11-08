@@ -123,3 +123,17 @@
 "terms_of_use" = "Podmienky používania";
 "support" = "Podpora";
 "parents_links_footer" = "Tieto odkazy otvoria webovú stránku mimo aplikácie a vyžadujú rodiča.";
+
+// --- Režim tvárou v tvár (iPad / iPhone Duo) ---
+"face_off_mode" = "Tvárou v tvár";
+"face_off_locked" = "Tvárou v tvár 🔒";
+"face_off_hint" = "2 hráči oproti sebe";
+"pro_feature_faceoff" = "Tvárou v tvár: 2 hráči na iPade alebo rozloženom iPhone Duo";
+"fo_first_to" = "Vyhráva, kto prvý dá %d správnych odpovedí!";
+"fo_ready" = "Som pripravený!";
+"fo_waiting" = "Čakám na druhého hráča…";
+"fo_get_ready" = "Pozor…";
+"fo_you_win" = "Vyhral si! 🏆";
+"fo_you_lose" = "Skvelý pokus! 💪";
+"fo_play_again" = "Hrať znova";
+"fo_exit" = "Koniec";

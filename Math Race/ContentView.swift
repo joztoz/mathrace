@@ -219,6 +219,7 @@ struct PaywallView: View {
 
                         VStack(alignment: .leading, spacing: 10) {
                             Label("pro_feature_duel", systemImage: "person.2.fill")
+                            Label("pro_feature_faceoff", systemImage: "rectangle.split.2x1.fill")
                             Label("pro_feature_ops_detail", systemImage: "plus.slash.minus")
                             Label("pro_feature_more_tables_detail", systemImage: "number.circle.fill")
                             Label("pro_feature_stats", systemImage: "chart.bar.xaxis")
@@ -323,6 +324,9 @@ struct ContentView: View {
     @State private var question: Question = Question(a: 1, b: 1, op: .multiply)
     @StateObject private var purchases = PurchaseManager.shared
     @State private var showPaywall = false
+    @State private var showFaceOff = false
+    @State private var hasFold = false
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     private var operationMode: OperationMode {
         OperationMode(rawValue: operationModeRaw) ?? .multiply
     }
@@ -410,6 +414,11 @@ struct ContentView: View {
         UIDevice.current.userInterfaceIdiom == .pad
     }
 
+    /// Face-to-face mode needs a big screen: iPad or the unfolded iPhone Duo inner display.
+    private var faceOffAvailable: Bool {
+        isPad || hasFold || horizontalSizeClass == .regular
+    }
+
     private var selectedLocale: Locale {
         switch appLanguage {
         case "en": return Locale(identifier: "en")
@@ -456,6 +465,10 @@ struct ContentView: View {
                     gateState = .start
                     ToneFeedback.shared.configureIfNeeded()
                     purchases.startListeningForTransactions()
+                    #if DEBUG
+                    // Screenshot / layout testing: open face-to-face mode directly.
+                    if ProcessInfo.processInfo.arguments.contains("-faceOffDemo") { showFaceOff = true }
+                    #endif
                     Task {
                         await purchases.loadProducts()
                         await purchases.refreshEntitlements()
@@ -497,6 +510,23 @@ struct ContentView: View {
                         onClose: { showPaywall = false }
                     )
                 }
+                .fullScreenCover(isPresented: $showFaceOff) {
+                    FaceOffView(
+                        target: roundLength,
+                        maxFactor: maxFactor,
+                        operation: operationMode,
+                        onExit: { showFaceOff = false }
+                    )
+                    .environment(\.locale, locale)
+                }
+                .background(
+                    GeometryReader { proxy in
+                        Color.clear
+                            .onChange(of: proxy.foldRect != nil, initial: true) { _, present in
+                                hasFold = present
+                            }
+                    }
+                )
                 .sheet(isPresented: $showResultsSheet) {
                     ResultsView(
                         mode: mode,
@@ -546,6 +576,10 @@ struct ContentView: View {
                         mode: $mode,
                         resultsAvailable: (!matchHistory.isEmpty || !singleRoundTimes.isEmpty || !duelRoundLog.isEmpty),
                         isPro: purchases.isPro,
+                        showFaceOff: faceOffAvailable,
+                        onFaceOff: {
+                            if purchases.isPro { showFaceOff = true } else { showPaywall = true }
+                        },
                         onModeChanged: {
                             // allow switching mode before starting
                             isTiming = false
@@ -2090,6 +2124,8 @@ struct GateOverlay: View {
     @Binding var mode: GameMode
     let resultsAvailable: Bool
     let isPro: Bool
+    let showFaceOff: Bool
+    let onFaceOff: () -> Void
     let onModeChanged: () -> Void
 
     let onStart: () -> Void
@@ -2120,6 +2156,21 @@ struct GateOverlay: View {
                     onModeChanged()
                 }
                 .frame(maxWidth: 420)
+
+                if showFaceOff {
+                    Button(action: onFaceOff) {
+                        VStack(spacing: 2) {
+                            Label(isPro ? "face_off_mode" : "face_off_locked", systemImage: "person.2.fill")
+                                .font(.system(.headline, design: .rounded).bold())
+                            Text("face_off_hint")
+                                .font(.system(.caption, design: .rounded))
+                                .foregroundStyle(.secondary)
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 54)
+                    }
+                    .buttonStyle(KidSecondaryButtonStyle())
+                    .frame(maxWidth: 420)
+                }
 
                 if state == .start {
                     Text("tap_to_start")

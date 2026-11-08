@@ -41,6 +41,7 @@ FEATURES
 
 MATH RACE PRO (optional one-time purchase, not a subscription)
 • Duel mode – two players on one device: who hits STOP first?
+• Face to face – on iPad or an unfolded iPhone Duo two kids sit opposite each other; the screen splits in half and each player races on their own side
 • Division, addition, subtraction and mixed practice
 • Tables up to 12
 • Results and progress statistics
@@ -67,6 +68,7 @@ FUNKCIE
 
 MATH RACE PRO (voliteľný jednorazový nákup, nie predplatné)
 • Duel – dvaja hráči na jednom zariadení: kto prvý stlačí STOP?
+• Tvárou v tvár – na iPade alebo rozloženom iPhone Duo sedia deti oproti sebe, displej sa rozdelí na polovice a každý pretekár rieši príklady na svojej strane
 • Delenie, sčítanie, odčítanie a mix
 • Tabuľky až do 12
 • Štatistiky výsledkov a pokroku
