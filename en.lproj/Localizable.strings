@@ -137,3 +137,8 @@
 "fo_you_lose" = "Nice try! 💪";
 "fo_play_again" = "Play again";
 "fo_exit" = "Exit";
+
+// --- End match ---
+"end_match" = "End round";
+"end_match_question" = "End this round and go back to the start?";
+"continue_playing" = "Keep playing";

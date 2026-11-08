@@ -137,3 +137,8 @@
 "fo_you_lose" = "Skvelý pokus! 💪";
 "fo_play_again" = "Hrať znova";
 "fo_exit" = "Koniec";
+
+// --- Ukončenie hry ---
+"end_match" = "Ukončiť kolo";
+"end_match_question" = "Ukončiť toto kolo a vrátiť sa na začiatok?";
+"continue_playing" = "Hrať ďalej";

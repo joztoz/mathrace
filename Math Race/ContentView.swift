@@ -13,6 +13,18 @@ import StoreKit
 import UIKit
 #endif
 
+// MARK: - Localization helper
+
+/// Looks up a string in the app's chosen language (Settings → Language), not just the system one.
+func localizedString(_ key: String, _ locale: Locale) -> String {
+    let code = locale.language.languageCode?.identifier ?? "en"
+    if let path = Bundle.main.path(forResource: code, ofType: "lproj"),
+       let bundle = Bundle(path: path) {
+        return bundle.localizedString(forKey: key, value: nil, table: nil)
+    }
+    return NSLocalizedString(key, comment: "")
+}
+
 // MARK: - Modes
 
 enum GameMode: String, CaseIterable, Identifiable {
@@ -149,6 +161,7 @@ final class PurchaseManager: ObservableObject {
 /// Displays the product title, purchase type (one-time, not a subscription) and price,
 /// plus links to the Privacy Policy and Terms of Use (Guideline 3.1.2), each behind the gate.
 struct PaywallView: View {
+    @Environment(\.locale) private var locale
     let isPro: Bool
     let product: Product?
     let onBuy: () -> Void
@@ -256,7 +269,7 @@ struct PaywallView: View {
                         Button(action: onBuy) {
                             Group {
                                 if let product {
-                                    Text(String(format: String(localized: "pro_buy_with_price"), product.displayPrice))
+                                    Text(String(format: localizedString("pro_buy_with_price", locale), product.displayPrice))
                                 } else {
                                     Text("pro_loading")
                                 }
@@ -377,6 +390,8 @@ struct ContentView: View {
         case matchEnded
     }
     @State private var showGateOverlay = true
+    @State private var didInitialSetup = false
+    @State private var confirmEndMatch = false
     @State private var gateState: GateState = .start
 
     @State private var singleRoundTimes: [TimeInterval] = []
@@ -414,6 +429,11 @@ struct ContentView: View {
         UIDevice.current.userInterfaceIdiom == .pad
     }
 
+    /// iPad or a wide window (e.g. the unfolded iPhone Duo inner display).
+    private var isWide: Bool {
+        isPad || horizontalSizeClass == .regular
+    }
+
     /// Face-to-face mode needs a big screen: iPad or the unfolded iPhone Duo inner display.
     private var faceOffAvailable: Bool {
         isPad || hasFold || horizontalSizeClass == .regular
@@ -445,6 +465,10 @@ struct ContentView: View {
             ZStack {
                 kidBackground
 
+                // Scrollable so the layout fits any window: portrait, landscape,
+                // the iPhone Duo inner display or iPad.
+                GeometryReader { geo in
+                ScrollView {
                 VStack(spacing: 18) {
                     header
                     if !showGateOverlay {
@@ -453,12 +477,17 @@ struct ContentView: View {
                     mainCard
                     Spacer(minLength: 0)
                 }
-                .frame(maxWidth: isPad ? 720 : .infinity)
-                .padding(.top, isPad ? 10 : 0)
-                .padding(.horizontal, isPad ? 28 : 16)
+                .frame(maxWidth: isWide ? 720 : .infinity)
+                .padding(.top, isWide ? 10 : 0)
+                .padding(.horizontal, isWide ? 28 : 16)
                 .padding(.vertical, 16)
+                .frame(maxWidth: .infinity, minHeight: geo.size.height, alignment: .top)
                 .toolbarTitleDisplayMode(.inline)
                 .onAppear {
+                    // Only on first launch: the view re-appears when the window moves
+                    // between displays (iPhone Duo) or rotates, which must not reset the game.
+                    guard !didInitialSetup else { return }
+                    didInitialSetup = true
                     // Start screen: wait for user
                     isTiming = false
                     showGateOverlay = true
@@ -466,8 +495,29 @@ struct ContentView: View {
                     ToneFeedback.shared.configureIfNeeded()
                     purchases.startListeningForTransactions()
                     #if DEBUG
-                    // Screenshot / layout testing: open face-to-face mode directly.
-                    if ProcessInfo.processInfo.arguments.contains("-faceOffDemo") { showFaceOff = true }
+                    // Screenshot / layout testing (App Store screenshots), DEBUG builds only.
+                    let shotArgs = ProcessInfo.processInfo.arguments
+                    if shotArgs.contains("-faceOffDemo") { showFaceOff = true }
+                    if shotArgs.contains("-shotPro") {
+                        Task {
+                            try? await Task.sleep(nanoseconds: 1_500_000_000)
+                            purchases.isPro = true
+                        }
+                    }
+                    if shotArgs.contains("-shotSingle") || shotArgs.contains("-shotDuel") {
+                        let duel = shotArgs.contains("-shotDuel")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+                            if duel { purchases.isPro = true }
+                            mode = duel ? .duel : .single
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+                            startNewMatch()
+                            if duel { p1Score = 4; p2Score = 3 } else { singleScore = 7; singleStreak = 4 }
+                        }
+                    }
+                    if shotArgs.contains("-shotSettings") {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { showSettingsSheet = true }
+                    }
                     #endif
                     Task {
                         await purchases.loadProducts()
@@ -546,6 +596,9 @@ struct ContentView: View {
                         }
                     )
                 }
+                }
+                .scrollBounceBehavior(.basedOnSize)
+                }
 
                 if mode == .duel {
                     duelOverlay
@@ -591,6 +644,9 @@ struct ContentView: View {
                         },
                         onShowResults: {
                             showResultsSheet = true
+                        },
+                        onShowSettings: {
+                            showSettingsSheet = true
                         }
                     )
                     .transition(.opacity)
@@ -634,9 +690,13 @@ struct ContentView: View {
                 Text("title_sub")
                     .font(.system(.subheadline, design: .rounded))
                     .foregroundStyle(.white.opacity(0.9))
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
                 Text("app_title")
                     .font(.system(.title2, design: .rounded).bold())
                     .foregroundStyle(.white)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
 
             Spacer()
@@ -691,6 +751,20 @@ struct ContentView: View {
                 showGateOverlay = true
                 gateState = .start
             }
+
+            Button {
+                confirmEndMatch = true
+            } label: {
+                Label("end_match", systemImage: "xmark.circle.fill")
+                    .labelStyle(.iconOnly)
+                    .font(.title2)
+                    .foregroundStyle(.white)
+            }
+            .accessibilityLabel(Text("end_match"))
+            .confirmationDialog("end_match_question", isPresented: $confirmEndMatch, titleVisibility: .visible) {
+                Button("end_match", role: .destructive) { endMatch() }
+                Button("continue_playing", role: .cancel) {}
+            }
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
@@ -740,6 +814,8 @@ struct ContentView: View {
             Text("score")
                 .font(.system(.caption, design: .rounded))
                 .foregroundStyle(.white.opacity(0.92))
+                .lineLimit(1)
+                .fixedSize()
             Text("\(singleScore)")
                 .font(.system(.title3, design: .rounded).weight(.black))
                 .foregroundStyle(.white)
@@ -756,6 +832,8 @@ struct ContentView: View {
             Text("streak")
                 .font(.system(.caption, design: .rounded))
                 .foregroundStyle(.white.opacity(0.92))
+                .lineLimit(1)
+                .fixedSize()
             Text("\(singleStreak)")
                 .font(.system(.title3, design: .rounded).weight(.black))
                 .foregroundStyle(.white)
@@ -1193,6 +1271,19 @@ struct ContentView: View {
     }
 
     // MARK: - Match helpers
+
+    /// Leave the running match and go back to the start screen.
+    private func endMatch() {
+        isTiming = false
+        showAnswer = false
+        currentRound = 1
+        singleRoundTimes = []
+        duelRoundTimesP1 = []
+        duelRoundTimesP2 = []
+        duelRoundLog = []
+        gateState = .start
+        showGateOverlay = true
+    }
 
     private func startNewMatch() {
         showResultsSheet = false
@@ -2130,6 +2221,7 @@ struct CorrectFullScreenOverlay: View {
 // MARK: - Gate Overlay (Start / Match End)
 
 struct GateOverlay: View {
+    @Environment(\.locale) private var locale
     let state: ContentView.GateState
     let roundLength: Int
 
@@ -2142,14 +2234,16 @@ struct GateOverlay: View {
 
     let onStart: () -> Void
     let onShowResults: () -> Void
+    let onShowSettings: () -> Void
 
     var body: some View {
         ZStack {
-            // light blur/veil so the underlying card is visible but blocked
-            Color.black.opacity(0.18)
+            // veil so the underlying screen is visible but clearly inactive
+            Color.black.opacity(0.28)
                 .ignoresSafeArea()
-                .allowsHitTesting(false)
 
+            GeometryReader { geo in
+            ScrollView {
             VStack(spacing: 14) {
                 Text(state == .start ? "🎮" : "🏁")
                     .font(.system(size: 54))
@@ -2189,7 +2283,7 @@ struct GateOverlay: View {
                         .font(.system(.title3, design: .rounded).weight(.black))
                         .multilineTextAlignment(.center)
 
-                    Text("\(roundLength) \(String(localized: "round_times"))")
+                    Text("\(localizedString("rounds_to_play", locale)): \(roundLength)")
                         .font(.system(.subheadline, design: .rounded))
                         .foregroundStyle(.secondary)
                 } else {
@@ -2212,16 +2306,27 @@ struct GateOverlay: View {
                     }
                     .buttonStyle(KidButtonStyle())
 
-                    Button {
-                        onShowResults()
-                    } label: {
-                        Text("open_results")
-                            .font(.system(.headline, design: .rounded).bold())
-                            .frame(maxWidth: .infinity, minHeight: 54)
+                    HStack(spacing: 10) {
+                        Button {
+                            onShowSettings()
+                        } label: {
+                            Label("settings", systemImage: "gearshape.fill")
+                                .font(.system(.headline, design: .rounded).bold())
+                                .frame(maxWidth: .infinity, minHeight: 54)
+                        }
+                        .buttonStyle(KidSecondaryButtonStyle())
+
+                        Button {
+                            onShowResults()
+                        } label: {
+                            Label("open_results", systemImage: "trophy.fill")
+                                .font(.system(.headline, design: .rounded).bold())
+                                .frame(maxWidth: .infinity, minHeight: 54)
+                        }
+                        .buttonStyle(KidSecondaryButtonStyle())
+                        .disabled(!resultsAvailable)
+                        .opacity(resultsAvailable ? 1 : 0.45)
                     }
-                    .buttonStyle(KidSecondaryButtonStyle())
-                    .disabled(!resultsAvailable)
-                    .opacity(resultsAvailable ? 1 : 0.45)
                 }
                 .frame(maxWidth: 420)
             }
@@ -2234,6 +2339,10 @@ struct GateOverlay: View {
                     .strokeBorder(Color.white.opacity(0.35), lineWidth: 1)
             )
             .padding(.horizontal, 18)
+            .frame(maxWidth: .infinity, minHeight: geo.size.height)
+            }
+            .scrollBounceBehavior(.basedOnSize)
+            }
         }
     }
 }

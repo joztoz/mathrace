@@ -1,4 +1,4 @@
-# Reply to App Review – Math Race Kids 1.0 (build 2)
+# Reply to App Review – Math Race Kids 1.0 (build 3)
 
 Paste into the App Store Connect Resolution Center reply / App Review notes.
 
@@ -6,7 +6,7 @@ Paste into the App Store Connect Resolution Center reply / App Review notes.
 
 Hello App Review team,
 
-Thank you for the review. We have addressed every point in build 1.0 (2).
+Thank you for the review. We have addressed every point in build 1.0 (3).
 
 **Guideline 2.1 – Information Needed (Kids Category, Guideline 1.3)**
 

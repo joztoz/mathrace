@@ -352,6 +352,7 @@ struct RotatedPanel<Content: View>: View {
 }
 
 struct FaceOffPanel: View {
+    @Environment(\.locale) private var locale
     @ObservedObject var game: FaceOffGame
     let player: Int
     let size: CGSize
@@ -420,7 +421,7 @@ struct FaceOffPanel: View {
         switch game.phase {
         case .lobby:
             VStack(spacing: unit * 0.04) {
-                Text(String(format: String(localized: "fo_first_to"), game.target))
+                Text(String(format: localizedString("fo_first_to", locale), game.target))
                     .font(.system(size: unit * 0.045, weight: .semibold, design: .rounded))
                     .multilineTextAlignment(.center)
                     .foregroundStyle(.white.opacity(0.8))
