@@ -1,0 +1,1023 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DC8D6EC2F1C372B0003ED2F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8D6EA2F1C372B0003ED2F /* Localizable.strings */; };
+		1DC8D7122F1C73A60003ED2F /* Math Race Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DC8D6F22F1C73A50003ED2F /* Math Race Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1DC8D71E2F1C741C0003ED2F /* SharedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D71D2F1C741C0003ED2F /* SharedGame.swift */; };
+		1DC8D71F2F1C741C0003ED2F /* SharedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D71D2F1C741C0003ED2F /* SharedGame.swift */; };
+		1DC8D7262F1D04A60003ED2F /* MathRace.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8D7252F1D04A60003ED2F /* MathRace.storekit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DC8D6CE2F1C2D310003ED2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DC8D6B82F1C2D300003ED2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC8D6BF2F1C2D300003ED2F;
+			remoteInfo = "Math Race";
+		};
+		1DC8D6D82F1C2D310003ED2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DC8D6B82F1C2D300003ED2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC8D6BF2F1C2D300003ED2F;
+			remoteInfo = "Math Race";
+		};
+		1DC8D6FF2F1C73A60003ED2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DC8D6B82F1C2D300003ED2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC8D6F12F1C73A50003ED2F;
+			remoteInfo = "Math Race Watch Watch App";
+		};
+		1DC8D7092F1C73A60003ED2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DC8D6B82F1C2D300003ED2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC8D6F12F1C73A50003ED2F;
+			remoteInfo = "Math Race Watch Watch App";
+		};
+		1DC8D7102F1C73A60003ED2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DC8D6B82F1C2D300003ED2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC8D6F12F1C73A50003ED2F;
+			remoteInfo = "Math Race Watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DC8D7162F1C73A60003ED2F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1DC8D7122F1C73A60003ED2F /* Math Race Watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1DC8D6C02F1C2D300003ED2F /* Math Race.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Race.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC8D6CD2F1C2D310003ED2F /* Math RaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math RaceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC8D6D72F1C2D310003ED2F /* Math RaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math RaceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC8D6EB2F1C372B0003ED2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1DC8D6ED2F1C37510003ED2F /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1DC8D6F22F1C73A50003ED2F /* Math Race Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Race Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC8D6FE2F1C73A60003ED2F /* Math Race Watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math Race Watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC8D7082F1C73A60003ED2F /* Math Race Watch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math Race Watch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC8D71D2F1C741C0003ED2F /* SharedGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SharedGame.swift; path = "Math Race Watch Watch App/SharedGame.swift"; sourceTree = "<group>"; };
+		1DC8D7252F1D04A60003ED2F /* MathRace.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = MathRace.storekit; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1DC8D6C22F1C2D300003ED2F /* Math Race */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math Race";
+			sourceTree = "<group>";
+		};
+		1DC8D6D02F1C2D310003ED2F /* Math RaceTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math RaceTests";
+			sourceTree = "<group>";
+		};
+		1DC8D6DA2F1C2D310003ED2F /* Math RaceUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math RaceUITests";
+			sourceTree = "<group>";
+		};
+		1DC8D6F32F1C73A50003ED2F /* Math Race Watch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math Race Watch Watch App";
+			sourceTree = "<group>";
+		};
+		1DC8D7012F1C73A60003ED2F /* Math Race Watch Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math Race Watch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		1DC8D70B2F1C73A60003ED2F /* Math Race Watch Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math Race Watch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DC8D6BD2F1C2D300003ED2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6CA2F1C2D310003ED2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6D42F1C2D310003ED2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6EF2F1C73A50003ED2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6FB2F1C73A60003ED2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D7052F1C73A60003ED2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DC8D6B72F1C2D300003ED2F = {
+			isa = PBXGroup;
+			children = (
+				1DC8D7252F1D04A60003ED2F /* MathRace.storekit */,
+				1DC8D71D2F1C741C0003ED2F /* SharedGame.swift */,
+				1DC8D6EA2F1C372B0003ED2F /* Localizable.strings */,
+				1DC8D6C22F1C2D300003ED2F /* Math Race */,
+				1DC8D6D02F1C2D310003ED2F /* Math RaceTests */,
+				1DC8D6DA2F1C2D310003ED2F /* Math RaceUITests */,
+				1DC8D6F32F1C73A50003ED2F /* Math Race Watch Watch App */,
+				1DC8D7012F1C73A60003ED2F /* Math Race Watch Watch AppTests */,
+				1DC8D70B2F1C73A60003ED2F /* Math Race Watch Watch AppUITests */,
+				1DC8D6C12F1C2D300003ED2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DC8D6C12F1C2D300003ED2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DC8D6C02F1C2D300003ED2F /* Math Race.app */,
+				1DC8D6CD2F1C2D310003ED2F /* Math RaceTests.xctest */,
+				1DC8D6D72F1C2D310003ED2F /* Math RaceUITests.xctest */,
+				1DC8D6F22F1C73A50003ED2F /* Math Race Watch Watch App.app */,
+				1DC8D6FE2F1C73A60003ED2F /* Math Race Watch Watch AppTests.xctest */,
+				1DC8D7082F1C73A60003ED2F /* Math Race Watch Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DC8D6BF2F1C2D300003ED2F /* Math Race */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC8D6E12F1C2D310003ED2F /* Build configuration list for PBXNativeTarget "Math Race" */;
+			buildPhases = (
+				1DC8D6BC2F1C2D300003ED2F /* Sources */,
+				1DC8D6BD2F1C2D300003ED2F /* Frameworks */,
+				1DC8D6BE2F1C2D300003ED2F /* Resources */,
+				1DC8D7162F1C73A60003ED2F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DC8D7112F1C73A60003ED2F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1DC8D6C22F1C2D300003ED2F /* Math Race */,
+			);
+			name = "Math Race";
+			packageProductDependencies = (
+			);
+			productName = "Math Race";
+			productReference = 1DC8D6C02F1C2D300003ED2F /* Math Race.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DC8D6CC2F1C2D310003ED2F /* Math RaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC8D6E42F1C2D310003ED2F /* Build configuration list for PBXNativeTarget "Math RaceTests" */;
+			buildPhases = (
+				1DC8D6C92F1C2D310003ED2F /* Sources */,
+				1DC8D6CA2F1C2D310003ED2F /* Frameworks */,
+				1DC8D6CB2F1C2D310003ED2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DC8D6CF2F1C2D310003ED2F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1DC8D6D02F1C2D310003ED2F /* Math RaceTests */,
+			);
+			name = "Math RaceTests";
+			packageProductDependencies = (
+			);
+			productName = "Math RaceTests";
+			productReference = 1DC8D6CD2F1C2D310003ED2F /* Math RaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DC8D6D62F1C2D310003ED2F /* Math RaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC8D6E72F1C2D310003ED2F /* Build configuration list for PBXNativeTarget "Math RaceUITests" */;
+			buildPhases = (
+				1DC8D6D32F1C2D310003ED2F /* Sources */,
+				1DC8D6D42F1C2D310003ED2F /* Frameworks */,
+				1DC8D6D52F1C2D310003ED2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DC8D6D92F1C2D310003ED2F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1DC8D6DA2F1C2D310003ED2F /* Math RaceUITests */,
+			);
+			name = "Math RaceUITests";
+			packageProductDependencies = (
+			);
+			productName = "Math RaceUITests";
+			productReference = 1DC8D6D72F1C2D310003ED2F /* Math RaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1DC8D6F12F1C73A50003ED2F /* Math Race Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC8D7132F1C73A60003ED2F /* Build configuration list for PBXNativeTarget "Math Race Watch Watch App" */;
+			buildPhases = (
+				1DC8D6EE2F1C73A50003ED2F /* Sources */,
+				1DC8D6EF2F1C73A50003ED2F /* Frameworks */,
+				1DC8D6F02F1C73A50003ED2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1DC8D6F32F1C73A50003ED2F /* Math Race Watch Watch App */,
+			);
+			name = "Math Race Watch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Math Race Watch Watch App";
+			productReference = 1DC8D6F22F1C73A50003ED2F /* Math Race Watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DC8D6FD2F1C73A60003ED2F /* Math Race Watch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC8D7172F1C73A60003ED2F /* Build configuration list for PBXNativeTarget "Math Race Watch Watch AppTests" */;
+			buildPhases = (
+				1DC8D6FA2F1C73A60003ED2F /* Sources */,
+				1DC8D6FB2F1C73A60003ED2F /* Frameworks */,
+				1DC8D6FC2F1C73A60003ED2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DC8D7002F1C73A60003ED2F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1DC8D7012F1C73A60003ED2F /* Math Race Watch Watch AppTests */,
+			);
+			name = "Math Race Watch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Math Race Watch Watch AppTests";
+			productReference = 1DC8D6FE2F1C73A60003ED2F /* Math Race Watch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DC8D7072F1C73A60003ED2F /* Math Race Watch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC8D71A2F1C73A60003ED2F /* Build configuration list for PBXNativeTarget "Math Race Watch Watch AppUITests" */;
+			buildPhases = (
+				1DC8D7042F1C73A60003ED2F /* Sources */,
+				1DC8D7052F1C73A60003ED2F /* Frameworks */,
+				1DC8D7062F1C73A60003ED2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DC8D70A2F1C73A60003ED2F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1DC8D70B2F1C73A60003ED2F /* Math Race Watch Watch AppUITests */,
+			);
+			name = "Math Race Watch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Math Race Watch Watch AppUITests";
+			productReference = 1DC8D7082F1C73A60003ED2F /* Math Race Watch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DC8D6B82F1C2D300003ED2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					1DC8D6BF2F1C2D300003ED2F = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					1DC8D6CC2F1C2D310003ED2F = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 1DC8D6BF2F1C2D300003ED2F;
+					};
+					1DC8D6D62F1C2D310003ED2F = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 1DC8D6BF2F1C2D300003ED2F;
+					};
+					1DC8D6F12F1C73A50003ED2F = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					1DC8D6FD2F1C73A60003ED2F = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 1DC8D6F12F1C73A50003ED2F;
+					};
+					1DC8D7072F1C73A60003ED2F = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 1DC8D6F12F1C73A50003ED2F;
+					};
+				};
+			};
+			buildConfigurationList = 1DC8D6BB2F1C2D300003ED2F /* Build configuration list for PBXProject "Math Race" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				sk,
+			);
+			mainGroup = 1DC8D6B72F1C2D300003ED2F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1DC8D6C12F1C2D300003ED2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DC8D6BF2F1C2D300003ED2F /* Math Race */,
+				1DC8D6CC2F1C2D310003ED2F /* Math RaceTests */,
+				1DC8D6D62F1C2D310003ED2F /* Math RaceUITests */,
+				1DC8D6F12F1C73A50003ED2F /* Math Race Watch Watch App */,
+				1DC8D6FD2F1C73A60003ED2F /* Math Race Watch Watch AppTests */,
+				1DC8D7072F1C73A60003ED2F /* Math Race Watch Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DC8D6BE2F1C2D300003ED2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC8D7262F1D04A60003ED2F /* MathRace.storekit in Resources */,
+				1DC8D6EC2F1C372B0003ED2F /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6CB2F1C2D310003ED2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6D52F1C2D310003ED2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6F02F1C73A50003ED2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6FC2F1C73A60003ED2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D7062F1C73A60003ED2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DC8D6BC2F1C2D300003ED2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC8D71E2F1C741C0003ED2F /* SharedGame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6C92F1C2D310003ED2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6D32F1C2D310003ED2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6EE2F1C73A50003ED2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC8D71F2F1C741C0003ED2F /* SharedGame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D6FA2F1C73A60003ED2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC8D7042F1C73A60003ED2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DC8D6CF2F1C2D310003ED2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC8D6BF2F1C2D300003ED2F /* Math Race */;
+			targetProxy = 1DC8D6CE2F1C2D310003ED2F /* PBXContainerItemProxy */;
+		};
+		1DC8D6D92F1C2D310003ED2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC8D6BF2F1C2D300003ED2F /* Math Race */;
+			targetProxy = 1DC8D6D82F1C2D310003ED2F /* PBXContainerItemProxy */;
+		};
+		1DC8D7002F1C73A60003ED2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC8D6F12F1C73A50003ED2F /* Math Race Watch Watch App */;
+			targetProxy = 1DC8D6FF2F1C73A60003ED2F /* PBXContainerItemProxy */;
+		};
+		1DC8D70A2F1C73A60003ED2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC8D6F12F1C73A50003ED2F /* Math Race Watch Watch App */;
+			targetProxy = 1DC8D7092F1C73A60003ED2F /* PBXContainerItemProxy */;
+		};
+		1DC8D7112F1C73A60003ED2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC8D6F12F1C73A50003ED2F /* Math Race Watch Watch App */;
+			targetProxy = 1DC8D7102F1C73A60003ED2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1DC8D6EA2F1C372B0003ED2F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DC8D6EB2F1C372B0003ED2F /* en */,
+				1DC8D6ED2F1C37510003ED2F /* sk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DC8D6DF2F1C2D310003ED2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DC8D6E02F1C2D310003ED2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DC8D6E22F1C2D310003ED2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-Race";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DC8D6E32F1C2D310003ED2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-Race";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DC8D6E52F1C2D310003ED2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-RaceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Race.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Math Race";
+			};
+			name = Debug;
+		};
+		1DC8D6E62F1C2D310003ED2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-RaceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Race.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Math Race";
+			};
+			name = Release;
+		};
+		1DC8D6E82F1C2D310003ED2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-RaceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Math Race";
+			};
+			name = Debug;
+		};
+		1DC8D6E92F1C2D310003ED2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-RaceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Math Race";
+			};
+			name = Release;
+		};
+		1DC8D7142F1C73A60003ED2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Math Race Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "funApp.Math-Race";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-Race.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Debug;
+		};
+		1DC8D7152F1C73A60003ED2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Math Race Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "funApp.Math-Race";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-Race.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Release;
+		};
+		1DC8D7182F1C73A60003ED2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-Race-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Race Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Math Race Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		1DC8D7192F1C73A60003ED2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-Race-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Race Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Math Race Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		1DC8D71B2F1C73A60003ED2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-Race-Watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Math Race Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		1DC8D71C2F1C73A60003ED2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58KC655S9B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "funApp.Math-Race-Watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Math Race Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DC8D6BB2F1C2D300003ED2F /* Build configuration list for PBXProject "Math Race" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC8D6DF2F1C2D310003ED2F /* Debug */,
+				1DC8D6E02F1C2D310003ED2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC8D6E12F1C2D310003ED2F /* Build configuration list for PBXNativeTarget "Math Race" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC8D6E22F1C2D310003ED2F /* Debug */,
+				1DC8D6E32F1C2D310003ED2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC8D6E42F1C2D310003ED2F /* Build configuration list for PBXNativeTarget "Math RaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC8D6E52F1C2D310003ED2F /* Debug */,
+				1DC8D6E62F1C2D310003ED2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC8D6E72F1C2D310003ED2F /* Build configuration list for PBXNativeTarget "Math RaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC8D6E82F1C2D310003ED2F /* Debug */,
+				1DC8D6E92F1C2D310003ED2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC8D7132F1C73A60003ED2F /* Build configuration list for PBXNativeTarget "Math Race Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC8D7142F1C73A60003ED2F /* Debug */,
+				1DC8D7152F1C73A60003ED2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC8D7172F1C73A60003ED2F /* Build configuration list for PBXNativeTarget "Math Race Watch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC8D7182F1C73A60003ED2F /* Debug */,
+				1DC8D7192F1C73A60003ED2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC8D71A2F1C73A60003ED2F /* Build configuration list for PBXNativeTarget "Math Race Watch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC8D71B2F1C73A60003ED2F /* Debug */,
+				1DC8D71C2F1C73A60003ED2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DC8D6B82F1C2D300003ED2F /* Project object */;
+}

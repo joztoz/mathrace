@@ -1,0 +1,111 @@
+"op_divide_locked" = "Divide 🔒";
+"op_add_locked" = "Add 🔒";
+"op_subtract_locked" = "Subtract 🔒";
+"op_mix_locked" = "Mix 🔒";
+"op_locked" = "Locked (PRO)";
+"duel_mode_locked" = "Duel 🔒";
+"pro" = "PRO";
+"pro_title" = "Unlock PRO";
+"pro_subtitle" = "Duel mode + more operations + bigger tables — no ads.";
+"pro_buy" = "Unlock PRO";
+"restore" = "Restore purchases";
+"pro_unlocked" = "PRO unlocked";
+"pro_unlock" = "Unlock PRO";
+// --- PRO paywall section additions ---
+"pro_badge" = "Kid‑safe";
+"pro_whats_included" = "What you get";
+"pro_feature_duel" = "Duel mode (2 players)";
+"pro_feature_ops_detail" = "More practice: Divide, Add, Subtract & Mix";
+"pro_feature_more_tables_detail" = "Bigger tables: up to 12";
+"pro_feature_stats" = "Results & progress stats";
+"pro_parent_title" = "For parents";
+"pro_parent_noads" = "No ads";
+"pro_parent_notracking" = "No tracking";
+"pro_parent_onetime" = "One‑time purchase";
+"pro_parent_note" = "PRO unlocks extra modes. The free version stays fully playable.";
+"pro_buy_with_price" = "Unlock PRO (%@)";
+"pro_footer" = "If you already bought PRO, tap Restore purchases.";
+"sounds" = "Sounds";
+"operation_mode" = "Practice";
+"op_multiply" = "Multiply";
+"op_divide" = "Divide";
+"op_add" = "Add";
+"op_subtract" = "Subtract";
+"op_mix" = "Mix";
+/* 
+  Localizable.strings
+  Math Race
+
+  Created by Jozef Ziak on 1/17/26.
+  
+*/
+"app_title" = "Math Race";
+"score" = "Score";
+"streak" = "Streak";
+"settings" = "Settings";
+"single_mode" = "Single";
+"duel_mode" = "Duel";
+"max_table" = "Max table:";
+"choose_answer" = "Choose the correct answer";
+"say_answer" = "Who says the answer first?";
+"tap_fast" = "Tap as fast as you can!";
+"show_now" = "Show now";
+"next" = "Next";
+"result" = "Result:";
+"try_again" = "Try again 🙂";
+"praise_good" = "Correct! ⭐️";
+"praise_great" = "Great job! 👏";
+"praise_amazing" = "Amazing! 🔥";
+"correct_toast_title" = "Correct!";
+"tap_to_start" = "Let's start!";
+"title_sub" = "Fast multiplication game";
+"single_header" = "Pick the answer";
+"duel_header" = "Two players on one phone";
+"question_title" = "Problem";
+
+"single_tip" = "Tip: tap the correct answer as fast as you can!";
+"duel_tip" = "Tip: first to hit STOP answers. If wrong, the other player can steal the point.";
+
+"duel_tap_stop" = "Ready… STOP!";
+"stop" = "STOP";
+"skip" = "Skip";
+
+"player1" = "Player 1";
+"player2" = "Player 2";
+"player1_short" = "P1";
+"player2_short" = "P2";
+
+"p1_turn" = "Player 1 answers!";
+"p2_turn" = "Player 2 answers!";
+"p1_steal" = "Player 1 can steal!";
+"p2_steal" = "Player 2 can steal!";
+
+"p1_answer_now" = "Player 1: pick the correct answer!";
+"p2_answer_now" = "Player 2: pick the correct answer!";
+
+"p1_point" = "Point for Player 1! 🎉";
+"p2_point" = "Point for Player 2! 🎉";
+"no_points" = "No points this time 🙂";
+
+"next_problem" = "Next problem";
+"next_round" = "Next round";
+"open_settings" = "Open settings";
+"close_settings" = "Close settings";
+"settings_hint" = "tap gear";
+"game_mode" = "Mode";
+"language" = "Language";
+"system_language" = "System";
+"english" = "English";
+"slovak" = "Slovak";
+"done" = "Done";
+"open_results" = "Results";
+"results" = "Results";
+"close" = "Close";
+"new_match" = "New round";
+"rounds_to_play" = "Rounds";
+"match_status" = "Progress";
+"average" = "Average time";
+"best" = "Best time";
+"faster" = "Faster";
+"round_times" = "Round times";
+"history" = "History";

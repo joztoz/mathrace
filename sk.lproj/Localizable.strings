@@ -1,0 +1,111 @@
+"op_divide_locked" = "Delenie 🔒";
+"op_add_locked" = "Sčítanie 🔒";
+"op_subtract_locked" = "Odčítanie 🔒";
+"op_mix_locked" = "Mix 🔒";
+"op_locked" = "Zamknuté (PRO)";
+"duel_mode_locked" = "Súboj 🔒";
+"pro" = "PRO";
+"pro_title" = "Odomknúť PRO";
+"pro_subtitle" = "Súboj + viac operácií + väčšia násobilka — bez reklám.";
+"pro_buy" = "Odomknúť PRO";
+"restore" = "Obnoviť nákupy";
+"pro_unlocked" = "PRO odomknuté";
+"pro_unlock" = "Odomknúť PRO";
+// --- PRO paywall section additions ---
+"pro_badge" = "Bezpečné pre deti";
+"pro_whats_included" = "Čo dostaneš";
+"pro_feature_duel" = "Súboj (2 hráči)";
+"pro_feature_ops_detail" = "Viac učenia: Delenie, Sčítanie, Odčítanie & Mix";
+"pro_feature_more_tables_detail" = "Väčšia násobilka: až do 12";
+"pro_feature_stats" = "Výsledky & štatistiky";
+"pro_parent_title" = "Pre rodičov";
+"pro_parent_noads" = "Bez reklám";
+"pro_parent_notracking" = "Bez sledovania";
+"pro_parent_onetime" = "Jednorazový nákup";
+"pro_parent_note" = "PRO odomkne extra režimy. Free verzia ostáva plne hrateľná.";
+"pro_buy_with_price" = "Odomknúť PRO (%@)";
+"pro_footer" = "Ak už PRO máš, ťukni Obnoviť nákupy.";
+"sounds" = "Zvuky";
+"operation_mode" = "Učenie";
+"op_multiply" = "Násobenie";
+"op_divide" = "Delenie";
+"op_add" = "Sčítanie";
+"op_subtract" = "Odčítanie";
+"op_mix" = "Mix";
+/* 
+  Localizable.strings
+  Math Race
+
+  Created by Jozef Ziak on 1/17/26.
+  
+*/
+"app_title" = "Math Race";
+"score" = "Skóre";
+"streak" = "Séria";
+"settings" = "Nastavenia";
+"single_mode" = "Jednotlivec";
+"duel_mode" = "Súboj";
+"max_table" = "Max násobilka:";
+"choose_answer" = "Vyber správny výsledok";
+"say_answer" = "Kto prvý povie výsledok?";
+"tap_fast" = "Klikni čo najrýchlejšie!";
+"show_now" = "Ukáž hneď";
+"next" = "Ďalší";
+"result" = "Výsledok:";
+"try_again" = "Skús ešte 🙂";
+"praise_good" = "Správne! ⭐️";
+"praise_great" = "Super! 👏";
+"praise_amazing" = "Úžasné! 🔥";
+"correct_toast_title" = "Správne!";
+"tap_to_start" = "Poďme na to!";
+"title_sub" = "Rýchla hra na násobilku";
+"single_header" = "Vyber výsledok";
+"duel_header" = "Súboj na jednom mobile";
+"question_title" = "Príklad";
+
+"single_tip" = "Tip: klikni na správny výsledok čo najrýchlejšie!";
+"duel_tip" = "Tip: kto prvý stlačí STOP, odpovedá. Pri chybe môže druhý ukradnúť bod.";
+
+"duel_tap_stop" = "Pripraviť… STOP!";
+"stop" = "STOP";
+"skip" = "Preskočiť";
+
+"player1" = "Hráč 1";
+"player2" = "Hráč 2";
+"player1_short" = "H1";
+"player2_short" = "H2";
+
+"p1_turn" = "Hráč 1 odpovedá!";
+"p2_turn" = "Hráč 2 odpovedá!";
+"p1_steal" = "Hráč 1 môže ukradnúť bod!";
+"p2_steal" = "Hráč 2 môže ukradnúť bod!";
+
+"p1_answer_now" = "Hráč 1: vyber správny výsledok!";
+"p2_answer_now" = "Hráč 2: vyber správny výsledok!";
+
+"p1_point" = "Bod pre Hráča 1! 🎉";
+"p2_point" = "Bod pre Hráča 2! 🎉";
+"no_points" = "Tentokrát bez bodu 🙂";
+
+"next_problem" = "Ďalší príklad";
+"next_round" = "Ďalšie kolo";
+"open_settings" = "Otvoriť nastavenia";
+"close_settings" = "Zavrieť nastavenia";
+"settings_hint" = "ťukni ozubené";
+"game_mode" = "Režim";
+"language" = "Jazyk";
+"system_language" = "Systém";
+"english" = "Angličtina";
+"slovak" = "Slovenčina";
+"done" = "Hotovo";
+"open_results" = "Výsledky";
+"results" = "Výsledky";
+"close" = "Zavrieť";
+"new_match" = "Nové kolo";
+"rounds_to_play" = "Počet kôl";
+"match_status" = "Priebeh kola";
+"average" = "Priemerný čas";
+"best" = "Najlepší čas";
+"faster" = "Rýchlejší";
+"round_times" = "Časy kôl";
+"history" = "História";
