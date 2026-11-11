@@ -117,7 +117,7 @@
 "gate_continue" = "Pokračovať";
 "gate_cancel" = "Zrušiť";
 "gate_wrong" = "Nesprávne. Tu je nové číslo.";
-"pro_purchase_type" = "Jednorazový nákup · navždy · nie je to predplatné";
+"pro_purchase_type" = "Jednorazový nákup · navždy tvoj";
 "pro_loading" = "Načítavam cenu…";
 "privacy_policy" = "Zásady ochrany súkromia";
 "terms_of_use" = "Podmienky používania";

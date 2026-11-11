@@ -158,7 +158,7 @@ final class PurchaseManager: ObservableObject {
 // MARK: - Paywall View (PRO)
 
 /// Shown only after the parental gate is passed (Guideline 1.3).
-/// Displays the product title, purchase type (one-time, not a subscription) and price,
+/// Displays the product title, purchase type (one-time purchase) and price,
 /// plus links to the Privacy Policy and Terms of Use (Guideline 3.1.2), each behind the gate.
 struct PaywallView: View {
     @Environment(\.locale) private var locale
@@ -167,11 +167,17 @@ struct PaywallView: View {
     let onBuy: () -> Void
     let onRestore: () -> Void
     let onClose: () -> Void
+    /// DEBUG screenshots only (IAP review screenshot): skip the gate and show a fixed price.
+    var debugPreview = false
 
     @State private var gatePassed = false
 
+    private var priceText: String? {
+        product?.displayPrice ?? (debugPreview ? "€1.99" : nil)
+    }
+
     var body: some View {
-        if gatePassed {
+        if gatePassed || debugPreview {
             paywall
         } else {
             ParentalGateView(
@@ -213,8 +219,8 @@ struct PaywallView: View {
                             .font(.system(.subheadline, design: .rounded).weight(.semibold))
                             .foregroundStyle(.secondary)
                             .multilineTextAlignment(.center)
-                        if let product {
-                            Text(product.displayPrice)
+                        if let priceText {
+                            Text(priceText)
                                 .font(.system(.largeTitle, design: .rounded).weight(.black))
                         } else {
                             ProgressView()
@@ -268,8 +274,8 @@ struct PaywallView: View {
                     VStack(spacing: 10) {
                         Button(action: onBuy) {
                             Group {
-                                if let product {
-                                    Text(String(format: localizedString("pro_buy_with_price", locale), product.displayPrice))
+                                if let priceText {
+                                    Text(String(format: localizedString("pro_buy_with_price", locale), priceText))
                                 } else {
                                     Text("pro_loading")
                                 }
@@ -278,7 +284,7 @@ struct PaywallView: View {
                             .frame(maxWidth: .infinity, minHeight: 56)
                         }
                         .buttonStyle(KidButtonStyle())
-                        .disabled(product == nil || isPro)
+                        .disabled(priceText == nil || isPro)
 
                         Button(action: onRestore) {
                             Text("restore")
@@ -392,6 +398,11 @@ struct ContentView: View {
     @State private var showGateOverlay = true
     @State private var didInitialSetup = false
     @State private var confirmEndMatch = false
+    #if DEBUG
+    private let debugPaywall = ProcessInfo.processInfo.arguments.contains("-shotPaywall")
+    #else
+    private let debugPaywall = false
+    #endif
     @State private var gateState: GateState = .start
 
     @State private var singleRoundTimes: [TimeInterval] = []
@@ -515,6 +526,9 @@ struct ContentView: View {
                             if duel { p1Score = 4; p2Score = 3 } else { singleScore = 7; singleStreak = 4 }
                         }
                     }
+                    if shotArgs.contains("-shotPaywall") {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { showPaywall = true }
+                    }
                     if shotArgs.contains("-shotSettings") {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { showSettingsSheet = true }
                     }
@@ -543,7 +557,7 @@ struct ContentView: View {
                 }
                 .sheet(isPresented: $showPaywall) {
                     PaywallView(
-                        isPro: purchases.isPro,
+                        isPro: debugPaywall ? false : purchases.isPro,
                         product: purchases.products.first(where: { $0.id == purchases.proProductId }),
                         onBuy: {
                             Task {
@@ -557,7 +571,8 @@ struct ContentView: View {
                                 if purchases.isPro { showPaywall = false }
                             }
                         },
-                        onClose: { showPaywall = false }
+                        onClose: { showPaywall = false },
+                        debugPreview: debugPaywall
                     )
                 }
                 .fullScreenCover(isPresented: $showFaceOff) {

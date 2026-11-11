@@ -87,7 +87,7 @@ FEATURES
 • English and Slovak
 • Apple Watch app for practice on the wrist
 
-MATH RACE PRO (optional one-time purchase, not a subscription)
+MATH RACE PRO (optional one-time purchase)
 • Duel mode – two players on one device: who hits STOP first?
 • Face to face – on iPad or an unfolded iPhone Duo two kids sit opposite each other; the screen splits in half and each player races on their own side
 • Division, addition, subtraction and mixed practice
@@ -114,7 +114,7 @@ FUNKCIE
 • Slovenčina a angličtina
 • Aplikácia pre Apple Watch na precvičovanie na zápästí
 
-MATH RACE PRO (voliteľný jednorazový nákup, nie predplatné)
+MATH RACE PRO (voliteľný jednorazový nákup)
 • Duel – dvaja hráči na jednom zariadení: kto prvý stlačí STOP?
 • Tvárou v tvár – na iPade alebo rozloženom iPhone Duo sedia deti oproti sebe, displej sa rozdelí na polovice a každý pretekár rieši príklady na svojej strane
 • Delenie, sčítanie, odčítanie a mix

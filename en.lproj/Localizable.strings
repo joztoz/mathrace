@@ -117,7 +117,7 @@
 "gate_continue" = "Continue";
 "gate_cancel" = "Cancel";
 "gate_wrong" = "That's not right. Here is a new number.";
-"pro_purchase_type" = "One-time purchase · lifetime access · not a subscription";
+"pro_purchase_type" = "One-time purchase · yours to keep";
 "pro_loading" = "Loading price…";
 "privacy_policy" = "Privacy Policy";
 "terms_of_use" = "Terms of Use";
